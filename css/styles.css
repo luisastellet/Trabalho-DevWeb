@@ -1,0 +1,15 @@
+.bgimage {
+    background-image: url('../imagens/fundo.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+@media screen and (max-width: 900px) {
+    .bgimage {
+        background-position: center;     
+        height: 20vh;
+        width: 80vw;
+    }
+}
