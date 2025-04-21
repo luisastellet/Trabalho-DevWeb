@@ -3,3 +3,14 @@
   height: 17px;
   padding-right: 4px;
 }
+
+.bgimage {
+  background-image: url('../imagens/fundo.webp');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+}
+
+form {
+  margin-top: 100px;
+}
