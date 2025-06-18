@@ -1,4 +1,4 @@
-package com.carlosribeiro.apirestfulv1.model;
+package com.luisamiguel.apirestfulv1.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
@@ -22,7 +22,7 @@ public class Categoria {
     private String slug;
 
     @JsonIgnore
-    @OneToMany (mappedBy = "categoria")
+    @OneToMany(mappedBy = "categoria")
     private List<Produto> produtos;
 
     public Categoria(String nome, String slug) {

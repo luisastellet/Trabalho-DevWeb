@@ -8,7 +8,7 @@
 		<version>3.4.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.carlosribeiro</groupId>
+	<groupId>com.luisamiguel</groupId>
 	<artifactId>apirestfulv17</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>apirestfulv1</name>

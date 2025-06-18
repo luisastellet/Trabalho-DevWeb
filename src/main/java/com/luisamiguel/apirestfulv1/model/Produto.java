@@ -1,4 +1,4 @@
-package com.carlosribeiro.apirestfulv1.model;
+package com.luisamiguel.apirestfulv1.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.DecimalMin;
@@ -23,26 +23,27 @@ public class Produto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotEmpty(message = "A 'Imagem' deve ser informada.")
+    @NotEmpty(message = "A Imagem deve ser informada.")
     private String imagem;
 
-    @NotEmpty(message = "O 'Nome' deve ser informado.")
+    @NotEmpty(message = "O Nome deve ser informado.")
     private String nome;
 
     private String slug;
 
+    @Column(length = 10000)
     @NotEmpty(message = "A 'Descrição' deve ser informada.")
     private String descricao;
 
     private boolean disponivel;
 
-    // Foi preciso mudar o tipo do campo de int para Integer para o @NotNull funcionar.
+
     @NotNull(message = "A 'Quantidade em estoque' deve ser informada.")
-    @Min(value=0, message = "A 'Quantidade em estoque' deve ser maior ou igual a 0.")
+    @Min(value = 0, message = "A 'Quantidade em estoque' deve ser maior ou igual a 0.")
     private Integer qtdEstoque;
 
     @NotNull(message = "O 'Preço' deve ser informado.")
-    @DecimalMin(inclusive = true, value="0.1", message = "O 'Preço' deve ser maior ou igual a 0.1.")
+    @DecimalMin(inclusive = true, value = "0.1", message = "O 'Preço' deve ser maior ou igual a 0.1.")
     private BigDecimal preco;
 
     @NotNull(message = "A 'Data de Cadastro' deve ser informada.")
@@ -53,8 +54,8 @@ public class Produto {
     private Categoria categoria;
 
     public Produto(String imagem, String nome, String slug, String descricao,
-                   boolean disponivel, Integer qtdEstoque, BigDecimal preco,
-                   LocalDate dataCadastro, Categoria categoria) {
+            boolean disponivel, Integer qtdEstoque, BigDecimal preco,
+            LocalDate dataCadastro, Categoria categoria) {
         this.imagem = imagem;
         this.nome = nome;
         this.slug = slug;

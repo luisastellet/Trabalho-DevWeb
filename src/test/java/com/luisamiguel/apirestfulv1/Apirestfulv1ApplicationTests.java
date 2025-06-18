@@ -1,4 +1,4 @@
-package com.carlosribeiro.apirestfulv1;
+package com.luisamiguel.apirestfulv1;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

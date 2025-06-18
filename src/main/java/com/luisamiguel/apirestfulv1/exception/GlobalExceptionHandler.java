@@ -1,4 +1,4 @@
-package com.carlosribeiro.apirestfulv1.exception;
+package com.luisamiguel.apirestfulv1.exception;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.ConstraintViolation;
@@ -15,13 +15,13 @@ import java.util.Map;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
-//    LocalDateTime localDateTime,
-//    int errorCode,
-//    String error,
-//    String metodo,
-//    String requestUri,
-//    Map<String, String> map,
-//    String message
+    // LocalDateTime localDateTime,
+    // int errorCode,
+    // String error,
+    // String metodo,
+    // String requestUri,
+    // Map<String, String> map,
+    // String message
 
     @ExceptionHandler(EntidadeNaoEncontradaException.class)
     public ResponseEntity<ErrorResponse> handleEntidadeNaoEncontrada(
@@ -55,7 +55,7 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorResponse> handleConstraintViolation(
             ConstraintViolationException e, HttpServletRequest request) {
         Map<String, String> map = new HashMap<>();
-        for (ConstraintViolation<?> cv : e.getConstraintViolations()){
+        for (ConstraintViolation<?> cv : e.getConstraintViolations()) {
             map.put(cv.getPropertyPath().toString(), cv.getMessage());
         }
 

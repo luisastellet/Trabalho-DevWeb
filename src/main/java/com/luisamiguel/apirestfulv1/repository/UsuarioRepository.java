@@ -1,6 +1,6 @@
-package com.carlosribeiro.apirestfulv1.repository;
+package com.luisamiguel.apirestfulv1.repository;
 
-import com.carlosribeiro.apirestfulv1.model.Usuario;
+import com.luisamiguel.apirestfulv1.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {

@@ -1,8 +1,8 @@
-package com.carlosribeiro.apirestfulv1.controller;
+package com.luisamiguel.apirestfulv1.controller;
 
-import com.carlosribeiro.apirestfulv1.model.Produto;
-import com.carlosribeiro.apirestfulv1.model.ResultadoPaginado;
-import com.carlosribeiro.apirestfulv1.service.ProdutoService;
+import com.luisamiguel.apirestfulv1.model.Produto;
+import com.luisamiguel.apirestfulv1.model.ResultadoPaginado;
+import com.luisamiguel.apirestfulv1.service.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -13,17 +13,17 @@ import java.util.List;
 
 @CrossOrigin("http://localhost:5173")
 @RestController
-@RequestMapping("produtos")  // http://localhost:8080/produtos
+@RequestMapping("produtos") // http://localhost:8080/produtos
 public class ProdutoController {
 
     @Autowired
     private ProdutoService produtoService;
 
-    @GetMapping   // Requisição do tipo GET para http://localhost:8080/produtos
+    @GetMapping // Requisição do tipo GET para http://localhost:8080/produtos
     public List<Produto> recuperarProdutos() {
-//        if (true) {
-//            throw new RuntimeException("Deu erro no servidor");
-//        }
+        // if (true) {
+        // throw new RuntimeException("Deu erro no servidor");
+        // }
         return produtoService.recuperarProdutos();
     }
 
@@ -49,7 +49,7 @@ public class ProdutoController {
         return produtoService.alterarProduto(produto);
     }
 
-    @DeleteMapping  ("{idProduto}")   // http://localhost:8080/produtos/1
+    @DeleteMapping("{idProduto}") // http://localhost:8080/produtos/1
     public void removerProduto(@PathVariable("idProduto") long id) {
         produtoService.removerProduto(id);
     }

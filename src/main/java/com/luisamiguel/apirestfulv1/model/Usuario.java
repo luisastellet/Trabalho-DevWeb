@@ -1,4 +1,4 @@
-package com.carlosribeiro.apirestfulv1.model;
+package com.luisamiguel.apirestfulv1.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
