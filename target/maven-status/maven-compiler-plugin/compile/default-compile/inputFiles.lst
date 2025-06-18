@@ -1,0 +1,16 @@
+/Users/luisa.stellet/Desktop/apirestfulv19/src/main/java/com/carlosribeiro/apirestfulv1/Apirestfulv1Application.java
+/Users/luisa.stellet/Desktop/apirestfulv19/src/main/java/com/carlosribeiro/apirestfulv1/controller/AutenticacaoController.java
+/Users/luisa.stellet/Desktop/apirestfulv19/src/main/java/com/carlosribeiro/apirestfulv1/controller/ProdutoController.java
+/Users/luisa.stellet/Desktop/apirestfulv19/src/main/java/com/carlosribeiro/apirestfulv1/exception/EntidadeNaoEncontradaException.java
+/Users/luisa.stellet/Desktop/apirestfulv19/src/main/java/com/carlosribeiro/apirestfulv1/exception/ErrorResponse.java
+/Users/luisa.stellet/Desktop/apirestfulv19/src/main/java/com/carlosribeiro/apirestfulv1/exception/GlobalExceptionHandler.java
+/Users/luisa.stellet/Desktop/apirestfulv19/src/main/java/com/carlosribeiro/apirestfulv1/model/Categoria.java
+/Users/luisa.stellet/Desktop/apirestfulv19/src/main/java/com/carlosribeiro/apirestfulv1/model/Produto.java
+/Users/luisa.stellet/Desktop/apirestfulv19/src/main/java/com/carlosribeiro/apirestfulv1/model/ResultadoPaginado.java
+/Users/luisa.stellet/Desktop/apirestfulv19/src/main/java/com/carlosribeiro/apirestfulv1/model/Usuario.java
+/Users/luisa.stellet/Desktop/apirestfulv19/src/main/java/com/carlosribeiro/apirestfulv1/repository/CategoriaRepository.java
+/Users/luisa.stellet/Desktop/apirestfulv19/src/main/java/com/carlosribeiro/apirestfulv1/repository/ProdutoRepository.java
+/Users/luisa.stellet/Desktop/apirestfulv19/src/main/java/com/carlosribeiro/apirestfulv1/repository/UsuarioRepository.java
+/Users/luisa.stellet/Desktop/apirestfulv19/src/main/java/com/carlosribeiro/apirestfulv1/service/AutenticacaoService.java
+/Users/luisa.stellet/Desktop/apirestfulv19/src/main/java/com/carlosribeiro/apirestfulv1/service/ProdutoService.java
+/Users/luisa.stellet/Desktop/apirestfulv19/src/main/java/com/carlosribeiro/apirestfulv1/util/TokenResponse.java
