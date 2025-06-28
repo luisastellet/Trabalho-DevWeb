@@ -48,13 +48,76 @@ public class Apirestfulv1Application implements CommandLineRunner {
 		Categoria home_decor = new Categoria("Home & Decor", "home-decor");
 		categoriaRepository.save(home_decor);
 
+		Categoria shampoo = new Categoria("Shampoo", "shampoos");
+		categoriaRepository.save(shampoo);
+
 		Produto produto = new Produto(
+				"hidratante_corporal.png",
+				"Hidratante Corporal",
+				"hidratante_corporal",
+				"Fórmula suave, nutritiva, com consistência cremosa e rápida absorção. Ideal para todos os tipos de pele. Contém ativos antioxidantes que auxiliam na hidratação e regeneração da pele. Principais ativos: Manteiga de Manga, Óleo Vegetal de Castanha do Pará, Óleo Vegetal de Pracaxi, Cera de Coco, Glicerina Vegetal, Lactado de Sódio, Vitamina E, água desmineralizada, Azeite de oliva, Óleos essenciais e Oleoresina Alecrim. ",
+				true,
+				500,
+				BigDecimal.valueOf(41.60),
+				LocalDate.of(2023, 4, 26),
+				velas);
+		produtoRepository.save(produto);
+
+		produto = new Produto(
+				"shampoo_dolomita.png",
+				"Shampoo de Dolomita",
+				"shampoo_dolomita",
+				"O Shampoo de Dolomita é um produto inovador que combina a pureza da dolomita com ingredientes naturais para proporcionar uma limpeza suave e eficaz aos cabelos. A dolomita, um mineral rico em magnésio e cálcio, é conhecida por suas propriedades benéficas para a saúde capilar. Este shampoo é formulado para nutrir, fortalecer e revitalizar os fios, deixando-os macios, brilhantes e saudáveis.",
+				true,
+				30,
+				BigDecimal.valueOf(38.00),
+				LocalDate.of(2023, 4, 26),
+				velas);
+		produtoRepository.save(produto);
+
+		produto = new Produto(
+				"shampoo_spirulina.png",
+				"Shampoo de Spirulina",
+				"shampoo_spirulina",
+				"O Shampoo de Spirulina é um produto inovador que combina a poderosa alga spirulina com ingredientes naturais para proporcionar uma limpeza suave e eficaz aos cabelos. A spirulina, rica em proteínas, vitaminas e minerais, é conhecida por suas propriedades benéficas para a saúde capilar. Este shampoo é formulado para nutrir, fortalecer e revitalizar os fios, deixando-os macios, brilhantes e saudáveis.",
+				true,
+				30,
+				BigDecimal.valueOf(38.00),
+				LocalDate.of(2023, 4, 26),
+				velas);
+		produtoRepository.save(produto);
+
+		produto = new Produto(
+				"shampoo_detox.png",
+				"Shampoo Detox",
+				"shampoo_detox",
+				"Um Shampoo de limpeza profunda que renova a saúde dos cabelos, controla a oleosidade e remove resíduos sem desidratar os fios. Ele é RECOMENDADO PARA TODOS OS TIPOS DE CABELOS. Possui em sua composição o Carvão Ativado e a Argila preta eles agem como removedor de toxinas e auxilia no crescimento dos fios, já o Óleo essencial de Menta refresca e ajuda no combate à descamação excessiva do couro cabeludo (caspa).",
+				true,
+				30,
+				BigDecimal.valueOf(38.00),
+				LocalDate.of(2023, 4, 26),
+				velas);
+		produtoRepository.save(produto);
+
+		produto = new Produto(
 				"saches-perfumados.png",
 				"Sachê Perfumado",
 				"sache_perfumado",
 				"Nossos sachês perfumados são cuidadosamente elaborados com essência premium vermiculita, um mineral que potencializa a fixação e a durabilidade das fragrâncias, liberando o aroma de forma suave e contínua por semanas. Perfeitos para perfumar gavetas, closets, bolsas, carros ou qualquer cantinho especial, eles proporcionam bem-estar e aconchego ao ambiente, transformando a rotina com os benefícios da aromaterapia.",
 				true,
 				100,
+				BigDecimal.valueOf(27.90),
+				LocalDate.of(2023, 4, 26),
+				home_decor);
+		produtoRepository.save(produto);
+
+		produto = new Produto(
+				"home_spray.png",
+				"Home Spray",
+				"home_spray",
+				"Desfrute de ambientes cheirosos e tenha uma experiência única e marcante com nossas coleções de Home Spray com perfumes exclusivos da linha de produtos para casa.. São diversas fragrâncias desenvolvidas especialmente para conquistar ambientes mais íntimos, românticos ou urbanos.",
+				true,
+				80,
 				BigDecimal.valueOf(27.90),
 				LocalDate.of(2023, 4, 26),
 				home_decor);
@@ -73,16 +136,82 @@ public class Apirestfulv1Application implements CommandLineRunner {
 		produtoRepository.save(produto);
 
 		produto = new Produto(
+				"sabonete_capim_limao_png",
+				"Sabonete de Capim Limão",
+				"sabonete_capim_limao",
+				"Auxilia na limpeza profunda da pele, combatendo impurezas e bactérias. Ajuda a proteger a pele contra os danos dos radicais livres. O aroma suave do capim limão proporciona uma sensação de frescor e tranquilidade.",
+				true,
+				42,
+				BigDecimal.valueOf(23.00),
+				LocalDate.of(2023, 6, 29),
+				sabonete);
+		produtoRepository.save(produto);
+
+		produto = new Produto(
+				"sabonete_pimenta_rosa_png",
+				"Sabonete de Pimenta Rosa",
+				"sabonete_pimenta_rosa",
+				"Quer cuidar da sua pele com um toque natural e eficaz? Nosso Sabonete de Pimenta Rosa com Óleo Essencial de Hortelã-Pimenta é a escolha perfeita para quem busca alívio e frescor no dia a dia. Com propriedades adstringentes, antissépticas e antifúngicas, ele auxilia no tratamento de dermatites, psoríase e outras irritações da pele.",
+				true,
+				260,
+				BigDecimal.valueOf(22.31),
+				LocalDate.of(2023, 6, 29),
+				sabonete);
+		produtoRepository.save(produto);
+
+		produto = new Produto(
+				"sabonete_camomila_png",
+				"Sabonete de Camomila",
+				"sabonete_camomila",
+				"O Sabonete de Camomila é o cuidado diário que a sua pele merece. Rico em flavonoides e cumarina, ingredientes naturais com propriedades calmantes e cicatrizantes, ele proporciona uma limpeza profunda e suave, respeitando o equilíbrio natural da pele Com ação hidratante e regeneradora, evita o ressecamento e melhora a textura da pele, deixando-a com um aspecto mais saudável, iluminado e jovem. Sua fórmula delicada auxilia no clareamento de manchas, promove a elasticidade e combate o aspecto seco e envelhecido.",
+				true,
+				300,
+				BigDecimal.valueOf(23.00),
+				LocalDate.of(2023, 8, 12),
+				sabonete);
+		produtoRepository.save(produto);
+
+		produto = new Produto(
+				"sabonete_maracuja_png",
+				"Sabonete de Maracujá",
+				"sabonete_maracuja",
+				"Promove hidratação e cicatrização ao mesmo tempo. A adição de suas sementes na composição do produto, produz uma esfoliação leve e a esperada sensação de limpeza. Sua apresentação em duas camadas dá ao sabonete uma interessante lembrança da fruta.",
+				true,
+				150,
+				BigDecimal.valueOf(23.00),
+				LocalDate.of(2023, 8, 12),
+				sabonete);
+		produtoRepository.save(produto);
+
+		produto = new Produto(
+				"sabonete_canela_png",
+				"Sabonete de Canela",
+				"sabonete_canela",
+				"Ele é afrodisíaco, estimulante, traz elasticidade e brilho à pele, e possui propriedades esfoliantes. Por conter alto teor de antioxidantes, ela é excelente no combate ao envelhecimento da cutis.",
+				true,
+				255,
+				BigDecimal.valueOf(23.00),
+				LocalDate.of(2023, 4, 2),
+				sabonete);
+		produtoRepository.save(produto);
+
+		produto = new Produto(
+				"sabonete_curcuma_png",
+				"Sabonete de Curcuma",
+				"sabonete_curcuma",
+				"Com propriedades anti-inflamatórias e antioxidantes, ajuda no tratamento de doenças inflamatória como psoríase e dermatite atópica, este sabonete vai deixar a sua pele com uma aparência mais jovem e saudável.",
+				true,
+				25,
+				BigDecimal.valueOf(23.00),
+				LocalDate.of(2023, 4, 2),
+				sabonete);
+		produtoRepository.save(produto);
+
+		produto = new Produto(
 				"sabonete_carvao_argila.png",
 				"Sabonete de Carvão e Argila",
 				"sabonete_carvao_argila",
-				"Um cuidado especial para a sua pele, direto da natureza.\n" + //
-				"Nosso sabonete natural combina o poder desintoxicante do carvão ativado com a ação purificante da argila preta, promovendo uma limpeza profunda e eficaz.\n" + //
-				"\n" + //
-				"🌿 Indicado para peles mistas, oleosas, com manchas e acne.\n" + //
-				"Pode ser usado tanto no rosto quanto no corpo, deixando a pele com uma sensação fresca e renovada.\n" + //
-				"\n" + //
-				"✨ Possui um aroma floral suave e equilibrado, graças à combinação dos óleos essenciais de gerânio e ginseng.",
+				"Auxilia na limpeza profunda da pele, combatendo impurezas e bactérias. Ajuda a proteger a pele contra os danos dos radicais livres. O aroma suave do capim limão proporciona uma sensação de frescor e tranquilidade.",
 				true,
 				500,
 				BigDecimal.valueOf(23.00),
@@ -91,123 +220,17 @@ public class Apirestfulv1Application implements CommandLineRunner {
 		produtoRepository.save(produto);
 
 		produto = new Produto(
-				"abobora.png",
-				"Abóbora",
-				"abobora",
-				"1 unidade aprox. 1,9kg",
+				"vela_aromatica.png",
+				"Vela Aromática",
+				"vela_aromatica",
+				"Vela aromática feita com cera de soja, pavio de madeira e óleos essenciais naturais. Proporciona uma experiência sensorial única, com aromas envolventes que criam um ambiente acolhedor e relaxante.",
 				true,
-				400,
-				BigDecimal.valueOf(4.7),
-				LocalDate.of(2023, 3, 24),
-				hidratante);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"acelga.png",
-				"Acelga",
-				"acelga",
-				"1 maço de aprox. 400g",
-				true,
-				120,
-				BigDecimal.valueOf(4.99),
-				LocalDate.of(2023, 3, 12),
+				100,
+				BigDecimal.valueOf(45.00),
+				LocalDate.of(2023, 4, 26),
 				velas);
 		produtoRepository.save(produto);
 
-		produto = new Produto(
-				"agriao.png",
-				"Agrião",
-				"agriao",
-				"1 maço de aprox. 200g",
-				true,
-				340,
-				BigDecimal.valueOf(2.5),
-				LocalDate.of(2023, 5, 17),
-				velas);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"alface.png",
-				"Alface",
-				"alface",
-				"1 maço de aprox. 200g",
-				true,
-				220,
-				BigDecimal.valueOf(4.99),
-				LocalDate.of(2023, 5, 14),
-				velas);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"banana.png",
-				"Banana",
-				"banana",
-				"1 unidade aprox. 165g",
-				true,
-				350,
-				BigDecimal.valueOf(1.05),
-				LocalDate.of(2023, 2, 22),
-				sabonete);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"beringela.png",
-				"Beringela",
-				"beringela",
-				"1 unidade aprox. 370g",
-				true,
-				720,
-				BigDecimal.valueOf(1.85),
-				LocalDate.of(2023, 2, 23),
-				hidratante);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"brocolis.png",
-				"Brócolis",
-				"brocolis",
-				"1 unidade aprox. 300g",
-				true,
-				600,
-				BigDecimal.valueOf(5.39),
-				LocalDate.of(2023, 3, 28),
-				velas);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"cebola.png",
-				"Cebola",
-				"cebola",
-				"1 unidade aprox. 200g",
-				true,
-				95,
-				BigDecimal.valueOf(0.56),
-				LocalDate.of(2023, 4, 30),
-				hidratante);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"cenoura.png",
-				"Cenoura",
-				"cenoura",
-				"1 unidade aprox. 180g",
-				true,
-				350,
-				BigDecimal.valueOf(1.01),
-				LocalDate.of(2023, 5, 29),
-				hidratante);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"cereja.png",
-				"Cereja",
-				"cereja",
-				"1 unidade aprox. 250g",
-				true,
-				240,
-				BigDecimal.valueOf(11.23),
-				LocalDate.of(2023, 5, 11),
-				sabonete);
-		produtoRepository.save(produto);
+		
 	}
 }
