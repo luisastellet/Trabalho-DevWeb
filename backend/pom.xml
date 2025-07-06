@@ -8,8 +8,8 @@
 		<version>3.4.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.luisamiguel</groupId>
-	<artifactId>apirestfulv17</artifactId>
+	<groupId>com.carlosribeiro</groupId>
+	<artifactId>apirestfulv20</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>apirestfulv1</name>
 	<description>Demo project for Spring Boot</description>

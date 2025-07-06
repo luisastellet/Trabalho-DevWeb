@@ -82,12 +82,16 @@ const CardsPorSlugCategoriaPage = () => {
 
   const produtosNoCarrinho: (ProdCarrinho | null)[] = [];
   data.pages.forEach((page) => {
-    page.itens.forEach((produto) => {
-      const prodCarrinho = carrinho.find(
-        (item: ProdCarrinho) => item.idProduto === produto.id
-      );
-      produtosNoCarrinho.push(prodCarrinho ? prodCarrinho : null);
-    });
+    if (page && Array.isArray(page.itens)) {
+      page.itens.forEach((produto) => {
+        const prodCarrinho = carrinho.find(
+          (item: ProdCarrinho) => item.idProduto === produto.id
+        );
+        produtosNoCarrinho.push(prodCarrinho ? prodCarrinho : null);
+      });
+    } else {
+      console.error("Nenhum item encontrado na resposta da página:", page);
+    }
   });
 
   console.log("produtos no carrinho = ", produtosNoCarrinho);
@@ -107,16 +111,18 @@ const CardsPorSlugCategoriaPage = () => {
       </h5>
       <div className="row">
         {data.pages.map((page, pagina) =>
-          page.itens.map((produto, index) => (
-            <div key={produto.id} className="col-lg-2 col-md-3 col-sm-4 col-6">
-              <Card
-                produto={produto}
-                produtoNoCarrinho={produtosNoCarrinho[pagina * tamanho + index]}
-                adicionarProduto={adicionarProduto}
-                subtrairProduto={subtrairProduto}
-              />
-            </div>
-          ))
+          page && Array.isArray(page.itens)
+            ? page.itens.map((produto, index) => (
+                <div key={produto.id} className="col-lg-2 col-md-3 col-sm-4 col-6">
+                  <Card
+                    produto={produto}
+                    produtoNoCarrinho={produtosNoCarrinho[pagina * tamanho + index]}
+                    adicionarProduto={adicionarProduto}
+                    subtrairProduto={subtrairProduto}
+                  />
+                </div>
+              ))
+            : null
         )}
       </div>
       {/* {hasNextPage && (

@@ -14,19 +14,30 @@ nav-link e active dentro de um elemento nav com a classe cat (de categoria) - pa
 ter certeza que isso só seria aplicado à lista de categorias. */
 
 nav.nav .nav-link.active {
-  background-color: green;
+  background-color: #fff;
+  color: #3cb371;
+  border: 2px solid #3cb371;
+  border-radius: 16px;
 }
 
 nav.nav .nav-link {
   color: black;
+  border-radius: 16px;
+  transition: border 0.2s, background 0.2s, color 0.2s;
 }
 
 nav.nav .nav-link:hover {
-  color: green;
+  color: white;
+  background-color: #b2eacb;
+  border: 2px solid #3cb371;
+  border-radius: 16px;
 }
 
 nav.nav .nav-link.active:hover {
   color: white;
+  background-color: #3cb371;
+  border: 2px solid #3cb371;
+  border-radius: 16px;
 }
 
 /* Vai aplicar as regras acima ao elemento abaixo em HomePage.tsx
@@ -39,4 +50,4 @@ nav.nav .nav-link.active:hover {
 button.btn.btn-secondary:hover {
   background-color: #6c757d;
   border-color: #6c757d;
-} 
+}
