@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
-import hortifruti from "../assets/hortifruti.png";
+// Trocar para logo do public
+const logo = "/logo.png";
 import useUsuarioStore from "../store/UsuarioStore";
 import Produto from "../interfaces/Produto";
 import useProdutoStore from "../store/ProdutoStore";
@@ -8,28 +9,30 @@ const NavBar = () => {
   const setProdutoSelecionado = useProdutoStore((s) => s.setProdutoSelecionado);
   
   return (
-    <nav className="navbar navbar-expand-lg bg-light navbar-light">
-      <div className="container">
-        <NavLink className="navbar-brand" to="/">
-          <img
-            src={hortifruti}
-            alt="logo do hortifruti"
-            style={{ width: "50px" }}
-          />
-        </NavLink>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+    <nav className="navbar navbar-expand-lg bg-light navbar-light" style={{ borderBottom: '2px solid #e0c3a0', background: '#e9e1d3', minHeight: 90 }}>
+      <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', minHeight: 90 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+          <NavLink className="navbar-brand" to="/">
+            <img
+              src={logo}
+              alt="logo do site"
+              style={{ width: "90px", height: "90px", objectFit: "contain" }}
+            />
+          </NavLink>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+        </div>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
+          <ul className="navbar-nav" style={{ gap: 18 }}>
             <li className="nav-item">
               <NavLink className="nav-link" aria-current="page" to="/">
                 Home
@@ -51,7 +54,7 @@ const NavBar = () => {
               </NavLink>
             </li>
           </ul>
-          <ul className="navbar-nav ms-auto">
+          <ul className="navbar-nav ms-auto" style={{ gap: 18 }}>
             <li className="nav-item">
               <NavLink className="nav-link" to="/carrinho">
                 Carrinho

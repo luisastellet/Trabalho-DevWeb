@@ -109,11 +109,11 @@ const CardsPorSlugCategoriaPage = () => {
           ? slugCategoria.charAt(0).toUpperCase() + slugCategoria.slice(1)
           : "Produtos"}
       </h5>
-      <div className="row">
+      <div className="row justify-content-center">
         {data.pages.map((page, pagina) =>
           page && Array.isArray(page.itens)
             ? page.itens.map((produto, index) => (
-                <div key={produto.id} className="col-lg-2 col-md-3 col-sm-4 col-6">
+                <div key={produto.id} className="col-lg-6 col-md-6 col-12 mb-4 d-flex">
                   <Card
                     produto={produto}
                     produtoNoCarrinho={produtosNoCarrinho[pagina * tamanho + index]}

@@ -1,5 +1,8 @@
 body {
     overflow-y: scroll;
+    background: linear-gradient(120deg, #f8f5f2 0%, #e9e1d3 100%);
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    color: #5c4032;
 }
 
 a:hover {
@@ -14,29 +17,29 @@ nav-link e active dentro de um elemento nav com a classe cat (de categoria) - pa
 ter certeza que isso só seria aplicado à lista de categorias. */
 
 nav.nav .nav-link.active {
-  background-color: #fff;
-  color: #3cb371;
-  border: 2px solid #3cb371;
+  background-color: #f8f5f2;
+  color: #7c5e3c;
+  border: 2px solid #bfae9c;
   border-radius: 16px;
 }
 
 nav.nav .nav-link {
-  color: black;
+  color: #5c4032;
   border-radius: 16px;
   transition: border 0.2s, background 0.2s, color 0.2s;
 }
 
 nav.nav .nav-link:hover {
-  color: white;
-  background-color: #b2eacb;
-  border: 2px solid #3cb371;
+  color: #fff;
+  background-color: #a67c52;
+  border: 2px solid #bfae9c;
   border-radius: 16px;
 }
 
 nav.nav .nav-link.active:hover {
-  color: white;
-  background-color: #3cb371;
-  border: 2px solid #3cb371;
+  color: #fff;
+  background-color: #7c5e3c;
+  border: 2px solid #bfae9c;
   border-radius: 16px;
 }
 
@@ -50,4 +53,47 @@ nav.nav .nav-link.active:hover {
 button.btn.btn-secondary:hover {
   background-color: #6c757d;
   border-color: #6c757d;
+}
+
+.navbar, .navbar-light, .bg-light {
+    background-color: #e9e1d3 !important;
+    border-bottom: 2px solid #bfae9c;
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    color: #7c5e3c !important;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+    color: #a67c52 !important;
+    background: #f8f5f2;
+    border-radius: 12px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #7c5e3c;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.btn-primary, .btn-outline-primary {
+    background-color: #a67c52;
+    border-color: #a67c52;
+    color: #fff;
+}
+
+.btn-primary:hover, .btn-outline-primary:hover {
+    background-color: #7c5e3c;
+    border-color: #7c5e3c;
+    color: #fff;
+}
+
+.card, .container, .row, .col-lg-2, .col-lg-10 {
+    background: transparent;
+    border: none;
+}
+
+hr {
+    border-top: 2px solid #bfae9c;
 }
