@@ -15,7 +15,7 @@ const Card = ({ produto, adicionarProduto, subtrairProduto, produtoNoCarrinho }:
       <div className="card-body" style={{ padding: 28 }}>
         <h5 className="card-title" style={{ color: '#7c5e3c', fontWeight: 600 }}>{produto.nome}</h5>
         <p className="card-text" style={{ minHeight: 80, color: '#5c4032', fontSize: 18, lineHeight: 1.5, marginBottom: 18 }}>{produto.descricao}</p>
-        <p className="card-text fw-bold" style={{color: "#a67c52", fontSize: 22}}>
+        <p className="card-text fw-bold" style={{color: "#a67c52", fontSize: 22, textAlign: 'center'}}>
           R${" "}
           {produto.preco.toLocaleString("pt-BR", {
             minimumFractionDigits: 2,
@@ -32,7 +32,10 @@ const Card = ({ produto, adicionarProduto, subtrairProduto, produtoNoCarrinho }:
             <button onClick={() => adicionarProduto(produto)} type="button" className="btn btn-secondary btn-sm">+</button>
           </div>
         </div>
-        <button style={produtoNoCarrinho ? {display: "none"} : {display: "block"}} onClick={() => adicionarProduto(produto)} type="button" className="btn btn-success btn-sm w-100">Comprar</button>
+        <button
+          style={{display: produtoNoCarrinho ? "none" : "flex", alignItems: "center", justifyContent: "center", margin: "auto", width: "30vw", fontWeight: "bold", fontSize: "large"}} onClick={() => adicionarProduto(produto)} type="button" className="btn btn-success btn-sm">
+          Comprar
+        </button>
       </div>
     </div>
   );
