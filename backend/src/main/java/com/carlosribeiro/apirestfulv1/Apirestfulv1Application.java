@@ -149,7 +149,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 		produtoRepository.save(produto);
 
 		produto = new Produto(
-				"sabonete_capim_limao_png",
+				"sabonete_capim_limao.png",
 				"Sabonete de Capim Limão",
 				"sabonete_capim_limao",
 				"Auxilia na limpeza profunda da pele, combatendo impurezas e bactérias. Ajuda a proteger a pele contra os danos dos radicais livres. O aroma suave do capim limão proporciona uma sensação de frescor e tranquilidade.",
@@ -161,7 +161,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 		produtoRepository.save(produto);
 
 		produto = new Produto(
-				"sabonete_pimenta_rosa_png",
+				"sabonete_pimenta_rosa.png",
 				"Sabonete de Pimenta Rosa",
 				"sabonete_pimenta_rosa",
 				"Quer cuidar da sua pele com um toque natural e eficaz? Nosso Sabonete de Pimenta Rosa com Óleo Essencial de Hortelã-Pimenta é a escolha perfeita para quem busca alívio e frescor no dia a dia. Com propriedades adstringentes, antissépticas e antifúngicas, ele auxilia no tratamento de dermatites, psoríase e outras irritações da pele.",
@@ -173,7 +173,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 		produtoRepository.save(produto);
 
 		produto = new Produto(
-				"sabonete_camomila_png",
+				"sabonete_camomila.png",
 				"Sabonete de Camomila",
 				"sabonete_camomila",
 				"O Sabonete de Camomila é o cuidado diário que a sua pele merece. Rico em flavonoides e cumarina, ingredientes naturais com propriedades calmantes e cicatrizantes, ele proporciona uma limpeza profunda e suave, respeitando o equilíbrio natural da pele Com ação hidratante e regeneradora, evita o ressecamento e melhora a textura da pele, deixando-a com um aspecto mais saudável, iluminado e jovem. Sua fórmula delicada auxilia no clareamento de manchas, promove a elasticidade e combate o aspecto seco e envelhecido.",
@@ -185,7 +185,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 		produtoRepository.save(produto);
 
 		produto = new Produto(
-				"sabonete_maracuja_png",
+				"sabonete_maracuja.png",
 				"Sabonete de Maracujá",
 				"sabonete_maracuja",
 				"Promove hidratação e cicatrização ao mesmo tempo. A adição de suas sementes na composição do produto, produz uma esfoliação leve e a esperada sensação de limpeza. Sua apresentação em duas camadas dá ao sabonete uma interessante lembrança da fruta.",
@@ -197,7 +197,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 		produtoRepository.save(produto);
 
 		produto = new Produto(
-				"sabonete_canela_png",
+				"sabonete_canela.png",
 				"Sabonete de Canela",
 				"sabonete_canela",
 				"Ele é afrodisíaco, estimulante, traz elasticidade e brilho à pele, e possui propriedades esfoliantes. Por conter alto teor de antioxidantes, ela é excelente no combate ao envelhecimento da cutis.",
@@ -209,7 +209,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 		produtoRepository.save(produto);
 
 		produto = new Produto(
-				"sabonete_curcuma_png",
+				"sabonete_curcuma.png",
 				"Sabonete de Curcuma",
 				"sabonete_curcuma",
 				"Com propriedades anti-inflamatórias e antioxidantes, ajuda no tratamento de doenças inflamatória como psoríase e dermatite atópica, este sabonete vai deixar a sua pele com uma aparência mais jovem e saudável.",
