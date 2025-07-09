@@ -10,6 +10,7 @@ import ProdutosComPaginacaoPage from "../pages/ProdutosComPaginacaoPage";
 import Layout from "./Layout";
 import PrivateRoutes from "./PrivateRoutes";
 import CadastrarProdutoPage from "../pages/CadastrarProdutoPage";
+import CadastroUsuarioPage from "../pages/CadastroUsuarioPage";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
             {path: "cadastrar-produto", element: <CadastrarProdutoPage />},
             {path: "produtos/:id", element: <ProdutoPage />},
             {path: "login", element: <LoginPage />},
+            {path: "cadastro", element: <CadastroUsuarioPage />},
         ]
     },
     {
