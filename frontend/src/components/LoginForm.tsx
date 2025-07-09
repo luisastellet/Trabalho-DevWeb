@@ -14,6 +14,7 @@ interface FormLogin {
 
 const LoginForm = () => {
   const setUsuarioLogado = useUsuarioStore((s) => s.setUsuarioLogado);
+  const setNomeUsuario = useUsuarioStore((s) => s.setNomeUsuario);
   const [loginInvalido, setLoginInvalido] = useState(false);
 
   useEffect(() => {
@@ -34,6 +35,7 @@ const LoginForm = () => {
       onSuccess: (tokenResponse: TokenResponse) => {
         if (tokenResponse.token > 0) {
           setUsuarioLogado(tokenResponse.token);
+          setNomeUsuario(conta);
           if (location.state?.destino) {
             navigate(location.state.destino);
           } else {

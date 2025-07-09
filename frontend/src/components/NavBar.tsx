@@ -6,6 +6,7 @@ import Produto from "../interfaces/Produto";
 import useProdutoStore from "../store/ProdutoStore";
 const NavBar = () => {
   const usuarioLogado = useUsuarioStore((s) => s.usuarioLogado);
+  const nomeUsuario = useUsuarioStore((s) => s.nomeUsuario);
   const setProdutoSelecionado = useProdutoStore((s) => s.setProdutoSelecionado);
   
   return (
@@ -55,6 +56,11 @@ const NavBar = () => {
             </li>
           </ul>
           <ul className="navbar-nav ms-auto" style={{ gap: 18 }}>
+            {usuarioLogado ? (
+              <li className="nav-item d-flex align-items-center" style={{ fontWeight: 600, color: '#7c5e3c', fontSize: 18 }}>
+                Olá, {nomeUsuario}
+              </li>
+            ) : null}
             <li className="nav-item">
               <NavLink className="nav-link" to="/carrinho">
                 Carrinho

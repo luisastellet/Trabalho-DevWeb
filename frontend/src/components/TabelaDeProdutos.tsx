@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import useProdutoStore from "../store/ProdutoStore";
 import useRecuperarProdutosComPaginacao from "../hooks/useRecuperarProdutosComPaginacao";
 import useRemoverProdutoPorId from "../hooks/useRemoverProdutoPorId";
+import useFavoritosStore from "../store/FavoritosStore";
 
 const TabelaDeProdutos = () => {
   const pagina = useProdutoStore((s) => s.pagina);
@@ -25,9 +26,11 @@ const TabelaDeProdutos = () => {
   
   const { mutate: removerProduto, error: errorRemocaoProduto } =
     useRemoverProdutoPorId();
+  const removerProdutoDeTodosFavoritos = useFavoritosStore((s) => s.removerProdutoDeTodosFavoritos);
 
   const tratarRemocao = (id: number) => {
     removerProduto(id);
+    removerProdutoDeTodosFavoritos(id);
     setPagina(0);
   };
 

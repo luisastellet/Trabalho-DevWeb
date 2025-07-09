@@ -89,7 +89,7 @@ const CarrinhoPage = () => {
       <>
         <h4 className="mb-4">Carrinho vazio!</h4>
         <div>
-          <a href="./produtos" className="btn btn-secondary">
+          <a href="./" className="btn btn-secondary">
             Continuar Comprando
           </a>
         </div>
@@ -159,48 +159,11 @@ const CarrinhoPage = () => {
                       </div>
                     </td>
                     <td className="text-center carrinho-subtotal">
-                      <input
-                        type="text"
-                        inputMode="decimal"
-                        className="form-control text-center carrinho-quantidade-input"
-                        style={{ fontWeight: 600, color: '#7c5e3c', fontSize: 17, background: 'transparent', border: 'none', boxShadow: 'none', display: 'inline', width: 90 }}
-                        value={editingValue !== undefined ? editingValue : subtotalPadrao}
-                        onFocus={e => {
-                          // Só seta o valor inicial se ainda não houver edição
-                          setEditingSubtotals(prev => {
-                            if (prev[produto.id! ] !== undefined) return prev;
-                            return { ...prev, [produto.id!]: subtotalPadrao };
-                          });
-                          e.target.select();
-                        }}
-                        onChange={e => {
-                          setEditingSubtotals(prev => ({ ...prev, [produto.id!]: e.target.value }));
-                        }}
-                        onBlur={e => {
-                          const valorStr = e.target.value.replace(/\./g, '').replace(',', '.');
-                          const valor = parseFloat(valorStr);
-                          if (e.target.value.trim() === '' || isNaN(valor) || valor <= 0) {
-                            setEditingSubtotals(prev => {
-                              const novo = { ...prev };
-                              delete novo[produto.id!];
-                              return novo;
-                            });
-                          } else {
-                            const novaQtd = Math.round(valor / produto.preco);
-                            alterarQuantidade(produto, novaQtd);
-                            setEditingSubtotals(prev => {
-                              const novo = { ...prev };
-                              delete novo[produto.id!];
-                              return novo;
-                            });
-                          }
-                        }}
-                        onKeyDown={e => {
-                          if (e.key === 'Enter') {
-                            (e.target as HTMLInputElement).blur();
-                          }
-                        }}
-                      />
+                    R$ {(produto.preco * prodCarrinho.quantidade).toLocaleString("pt-BR", {
+                      minimumFractionDigits: 2,
+                      maximumFractionDigits: 2,
+                      useGrouping: true,
+                    })}
                     </td>
                     <td className="text-center">
                       <button
@@ -216,14 +179,17 @@ const CarrinhoPage = () => {
             </tbody>
           </table>
         </div>
-        <div className="row align-items-center mt-4" style={{ maxWidth: 900, margin: '0 auto' }}>
+        <div className="row align-items-center mt-4" style={{ maxWidth: 900, margin: '0 auto'}}>
           <div className="col-md-6 d-flex justify-content-start">
-            <a href="./produtos" className="btn carrinho-btn-lg carrinho-btn-continuar">
+            <a href="./" className="btn carrinho-btn-lg carrinho-btn-continuar" style={{padding: "12px 0", minHeight: 48, display: 'flex', alignItems: 'center', fontWeight: 600, fontSize: '1.15rem', borderRadius: 8, minWidth: 200, padding: "0px 15px"}}>
               Continuar Comprando
             </a>
           </div>
-          <div className="col-md-6 d-flex justify-content-end">
-            <h4 style={{ marginRight: 24, color: '#7c5e3c', fontWeight: 700 }}>
+          <div className="col-md-6 d-flex justify-content-end align-items-center gap-3">
+            <button className="btn btn-primary carrinho-btn-lg" style={{padding: "12px 0", minHeight: 48, fontWeight: 600, fontSize: '1.15rem', borderRadius: 8, minWidth: 200, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+              Finalizar Compra
+            </button>
+            <h4 style={{ color: '#7c5e3c', fontWeight: 700, margin: 0, minWidth: 180, textAlign: 'center', display: 'flex', alignItems: 'center', height: 48 }}>
               Total: R$ {produtosNoCarrinho
                 .map(({ produto, prodCarrinho }) =>
                   produto.preco * prodCarrinho.quantidade
@@ -235,9 +201,6 @@ const CarrinhoPage = () => {
                   useGrouping: true,
                 })}
             </h4>
-            <button className="btn btn-primary carrinho-btn-lg">
-              Finalizar Compra
-            </button>
           </div>
         </div>
       </section>
