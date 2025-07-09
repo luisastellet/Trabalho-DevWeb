@@ -40,7 +40,7 @@ const CadastroUsuarioForm = ({ onSuccess }: Props) => {
     }
     setLoading(true);
     try {
-      const res = await fetch("/cadastro", {
+      const res = await fetch("http://localhost:8080/cadastro", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ conta: form.conta, senha: form.senha }),
