@@ -41,6 +41,7 @@ const LoginForm = () => {
           }
         } else {
           setLoginInvalido(true);
+          setTimeout(() => navigate("/cadastro"), 1500);
         }
       },
     });

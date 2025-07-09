@@ -48,6 +48,9 @@ const CadastroUsuarioForm = ({ onSuccess }: Props) => {
       if (!res.ok) {
         const data = await res.json();
         setApiError(data.message || "Erro ao cadastrar usuário");
+        if (data.message && data.message.toLowerCase().includes("já cadastrada")) {
+          setTimeout(() => window.location.href = "/login", 1500);
+        }
       } else {
         onSuccess();
       }
@@ -98,6 +101,17 @@ const CadastroUsuarioForm = ({ onSuccess }: Props) => {
       <button type="submit" className="btn btn-primary w-100" disabled={loading}>
         {loading ? "Cadastrando..." : "Cadastrar"}
       </button>
+      <div className="mt-3 text-center">
+        <span>Já possui uma conta?{' '}</span>
+        <button
+          type="button"
+          className="btn btn-link p-0"
+          style={{ color: '#8B4513', textDecoration: "none", fontWeight: 500 }}
+          onClick={() => window.location.href = "/login"}
+        >
+          Entre
+        </button>
+      </div>
     </form>
   );
 };
