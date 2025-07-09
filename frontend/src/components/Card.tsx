@@ -33,7 +33,7 @@ const Card = ({ produto, adicionarProduto, subtrairProduto, produtoNoCarrinho }:
           </div>
         </div>
         <button
-          style={{display: produtoNoCarrinho ? "none" : "flex", alignItems: "center", justifyContent: "center", margin: "auto", width: "30vw", fontWeight: "bold", fontSize: "large"}} onClick={() => adicionarProduto(produto)} type="button" className="btn btn-success btn-sm">
+          style={{display: produtoNoCarrinho ? "none" : "flex", alignItems: "center", justifyContent: "center", margin: "auto", width: "80%", fontWeight: "bold", fontSize: "large"}} onClick={() => adicionarProduto(produto)} type="button" className="btn btn-success btn-sm">
           Comprar
         </button>
       </div>
