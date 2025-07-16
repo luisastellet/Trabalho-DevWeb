@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Produto from "../interfaces/Produto";
 import useRecuperarProdutos from "../hooks/useRecuperarProdutos";
 import "./CarrinhoPage.css";
+import useUsuarioStore from "../store/UsuarioStore";
 
 export interface ProdCarrinho {
   idProduto: number;
@@ -22,6 +23,8 @@ const CarrinhoPage = () => {
 
   // Estado separado para edição do subtotal
   const [editingSubtotals, setEditingSubtotals] = useState<{ [idProduto: number]: string }>({});
+
+  const usuarioId = useUsuarioStore((s) => s.usuarioLogado);
 
   useEffect(() => {
     localStorage.setItem("carrinho", JSON.stringify(carrinho));
@@ -189,8 +192,22 @@ const CarrinhoPage = () => {
           <div className="col-md-6 d-flex justify-content-end align-items-center gap-3">
             <button
               className="btn btn-primary carrinho-btn-lg"
-              style={{padding: "12px 0", minHeight: 48, fontWeight: 600, fontSize: '1.15rem', borderRadius: 8, minWidth: 200, display: 'flex', alignItems: 'center', justifyContent: 'center'}}
+              style={{
+                padding: "0px 15px",
+                minHeight: 48,
+                fontWeight: 600,
+                borderRadius: 8,
+                minWidth: 200,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                opacity: usuarioId ? 1 : 0.6,
+                backgroundColor: '#0d6efd',
+                borderColor: '#0d6efd',
+                color: '#fff',
+              }}
               onClick={() => {
+                if (!usuarioId) return;
                 window.alert('Compra realizada com sucesso!');
                 setCarrinho([]);
                 localStorage.removeItem('carrinho');
