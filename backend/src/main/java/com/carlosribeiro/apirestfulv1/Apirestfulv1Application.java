@@ -244,5 +244,141 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				velas);
 		produtoRepository.save(produto);
 
+		produto = new Produto(
+				"serum_facial_madura.webp",
+				"Serum Facial para Pele Madura",
+				"serum_facial_madura",
+				"Sérum Facial para Peles Maduras  - Produzido com o Oleo Vegetal de Rosa Mosqueta, Semente de Uva, Germen de Trigo e Vitamina E. Auxilia a regeneracao da membrana celular e fornece Vitamina A natural para pele. Com oleos essenciais de Gerânio, Palmarosa e Ylang Ylang que tonificam e revigoram a pele madura.",
+				true,
+				30,
+				BigDecimal.valueOf(55.00),
+				LocalDate.of(2023, 4, 26),
+				home_decor);
+		produtoRepository.save(produto);
+
+		produto = new Produto(
+				"serum_pele_oleosa.webp",
+				"Serum Facial para Pele Oleosa",
+				"serum_pele_oleosa",
+				"Sérum Facial para Peles Oleosas - Produzido com o Óleo Vegetal de Jojoba, Óleo Vegetal de Semente de Uva e Óleo Vegetal de Rosa Mosqueta. Auxilia a regular a oleosidade da pele, mantendo-a hidratada e saudável. Com óleos essenciais de Tea Tree, Lavanda e Limão Siciliano que ajudam a controlar a oleosidade e a acne.",
+				true,
+				30,
+				BigDecimal.valueOf(49.00),
+				LocalDate.of(2023, 4, 26),
+				home_decor);
+		produtoRepository.save(produto);
+
+			produto = new Produto(
+				"balm_labial_stick.webp",
+				"Balm Labial Stick",
+				"balm_labial_stick",
+				"Balm Labial Stick - Produzido com Manteiga de Karité, Óleo Vegetal de Abacate e Cera de Abelha. Hidrata e protege os lábios, deixando-os macios e saudáveis. Com óleos essenciais de Menta e Limão Siciliano que proporcionam uma sensação refrescante e revigorante.",
+				true,
+				15,
+				BigDecimal.valueOf(20.00),
+				LocalDate.of(2023, 4, 26),
+				hidratante);
+		produtoRepository.save(produto);
+
+			produto = new Produto(
+				"escalda_pes.webp",
+				"Escalda Pés Relaxante",
+				"escalda_pes",
+				"Escalda Pés Relaxante - Produzido com Sal Grosso, Óleo Vegetal de Amêndoas Doces e Óleos Essenciais de Lavanda e Eucalipto. Proporciona um momento de relaxamento e alívio para os pés cansados, ajudando a reduzir o inchaço e a fadiga. Ideal para ser usado após um longo dia de trabalho ou atividades físicas. Basta dissolver o produto em água morna e mergulhar os pés por alguns minutos para sentir o alívio e o relaxamento.",
+				true,
+				20,
+				BigDecimal.valueOf(35.00),
+				LocalDate.of(2023, 4, 26),
+				sabonete);
+		produtoRepository.save(produto);
+		
+			produto = new Produto(
+				"difusores_ambiente.webp",
+				"Difusores de Ambiente",
+				"difusores_ambiente",
+				"Difusores de Ambiente - Produzidos com óleos essenciais naturais e álcool de cereais, os difusores de ambiente são uma forma prática e elegante de perfumar o ambiente. Com uma variedade de fragrâncias, eles proporcionam uma experiência sensorial única e duradoura. Basta colocar os palitos de madeira no frasco e deixar que o aroma se espalhe pelo ambiente. Ideal para ser usado em casa, no escritório ou em qualquer lugar que precise de um toque especial de frescor e bem-estar. Disponíveis em diferentes tamanhos e fragrâncias, esses difusores são perfeitos para criar uma atmosfera acolhedora e relaxante.",
+				true,
+				100,
+				BigDecimal.valueOf(60.00),
+				LocalDate.of(2023, 4, 26),
+				home_decor);
+		produtoRepository.save(produto);
+
+			produto = new Produto(
+				"desodorante.webp",
+				"Desodorante Natural",
+				"desodorante_natural",
+				"Desodorante Natural - Produzido com Óleo Vegetal de Coco, Bicarbonato de Sódio e Óleos Essenciais de Lavanda e Tea Tree. Proporciona uma proteção eficaz contra odores, sem agredir a pele. Com uma fórmula livre de alumínio e parabenos, é uma opção saudável e sustentável para quem busca um desodorante natural. A combinação dos óleos essenciais proporciona uma sensação refrescante e revigorante, mantendo a pele seca e confortável ao longo do dia. Ideal para ser usado diariamente, garantindo proteção e conforto sem comprometer a saúde da pele.",
+				true,
+				50,
+				BigDecimal.valueOf(30.00),
+				LocalDate.of(2023, 4, 26),
+				hidratante);
+		produtoRepository.save(produto);
+
+			produto = new Produto(
+				"esponja.webp",
+				"Esponja Vegetal",
+				"esponja_vegetal",
+				"Esponja Vegetal - Feita a partir da fibra natural do luffa, a esponja vegetal é uma opção ecológica e sustentável para esfoliação da pele. Com propriedades esfoliantes, ela ajuda a remover as células mortas e a estimular a circulação sanguínea, deixando a pele mais suave e renovada. Ideal para ser usada no banho, a esponja vegetal é uma alternativa saudável e amiga do meio ambiente aos produtos sintéticos.",
+				true,
+				30,
+				BigDecimal.valueOf(15.00),
+				LocalDate.of(2023, 4, 26),
+				sabonete);
+		produtoRepository.save(produto);
+
+			produto = new Produto(
+				"sinergia_foco.webp",
+				"Sinergia Foco",
+				"sinergia_foco",
+				"Sinergia Foco - Produzida com óleos essenciais de Alecrim, Hortelã-Pimenta e Limão Siciliano. Proporciona uma sensação de clareza mental e concentração, ideal para momentos de estudo ou trabalho. Com uma fórmula 100% natural, a Sinergia Foco é uma opção saudável e eficaz para quem busca aumentar a produtividade e o foco.",
+				true,
+				10,
+				BigDecimal.valueOf(45.00),
+				LocalDate.of(2023, 4, 26),
+				home_decor);
+		produtoRepository.save(produto);
+
+			produto = new Produto(
+				"sinergia_enxaqueca.jpg",
+				"Sinergia Enxaqueca",
+				"sinergia_enxaqueca",
+				"Sinergia Enxaqueca - Produzida com óleos essenciais de Lavanda, Hortelã-Pimenta e Eucalipto. Proporciona alívio para dores de cabeça e enxaquecas, ajudando a relaxar e aliviar a tensão. Com uma fórmula 100% natural, a Sinergia Enxaqueca é uma opção saudável e eficaz para quem busca alívio para dores de cabeça e enxaquecas.",
+				true,
+				10,
+				BigDecimal.valueOf(45.00),
+				LocalDate.of(2023, 4, 26),
+				home_decor);
+		produtoRepository.save(produto);
+
+			produto = new Produto(
+				"sabonete_macela.webp",
+				"Sabonete de Macela",
+				"sabonete_macela",
+				"Sabonete de Macela - Produzido com extrato de macela, um ingrediente natural conhecido por suas propriedades calmantes e anti-inflamatórias. Auxilia no tratamento de irritações e alergias na pele, proporcionando alívio e conforto. Com uma fórmula suave e delicada, o sabonete de macela é ideal para peles sensíveis e propensas a irritações. Ele ajuda a acalmar a pele, reduzindo vermelhidão e coceira, deixando-a mais suave e saudável.",
+				true,
+				30,
+				BigDecimal.valueOf(23.00),
+				LocalDate.of(2023, 4, 26),
+				sabonete);
+		produtoRepository.save(produto);
+
+			produto = new Produto(
+				"kit_home.webp",
+				"Kit Home",
+				"kit_home",
+				"Kit Home - Um conjunto especial de produtos para transformar sua casa em um lar acolhedor e perfumado. Inclui um difusor de ambiente, um home spray e um sachê perfumado, todos com fragrâncias exclusivas e naturais. O difusor de ambiente proporciona uma liberação contínua de aroma, enquanto o home spray é ideal para borrifar em roupas de cama, cortinas e sofás. O sachê perfumado é perfeito para gavetas, armários e bolsas, deixando tudo com um cheiro agradável e duradouro.",
+				true,
+				100,
+				BigDecimal.valueOf(120.00),
+				LocalDate.of(2023, 4, 26),
+				home_decor);
+		produtoRepository.save(produto);
+
+
+
+		
+
 	}
 }
