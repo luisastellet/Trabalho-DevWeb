@@ -8,7 +8,6 @@ import LoginPage from "../pages/LoginPage";
 import ProdutoPage from "../pages/ProdutoPage";
 import ProdutosComPaginacaoPage from "../pages/ProdutosComPaginacaoPage";
 import Layout from "./Layout";
-import PrivateRoutes from "./PrivateRoutes";
 import CadastrarProdutoPage from "../pages/CadastrarProdutoPage";
 import CadastroUsuarioPage from "../pages/CadastroUsuarioPage";
 
