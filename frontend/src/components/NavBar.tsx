@@ -13,13 +13,11 @@ const NavBar = () => {
     <nav className="navbar navbar-expand-lg bg-light navbar-light" style={{ borderBottom: '2px solid #e0c3a0', background: '#e9e1d3', minHeight: 90 }}>
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', minHeight: 90 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-          <NavLink className="navbar-brand" to="/">
-            <img
-              src={logo}
-              alt="logo do site"
-              style={{ width: "90px", height: "90px", objectFit: "contain" }}
-            />
-          </NavLink>
+          <img
+            src={logo}
+            alt="logo do site"
+            style={{ width: "90px", height: "90px", paddingRight: "10px", objectFit: "contain" }}
+          />
           <button
             className="navbar-toggler"
             type="button"

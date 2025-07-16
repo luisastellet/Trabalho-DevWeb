@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Produto from "../interfaces/Produto";
 import useRecuperarProdutos from "../hooks/useRecuperarProdutos";
 import "./CarrinhoPage.css";
@@ -89,9 +90,9 @@ const CarrinhoPage = () => {
       <>
         <h4 className="mb-4">Carrinho vazio!</h4>
         <div>
-          <a href="./" className="btn btn-secondary">
+          <Link to="/" className="btn btn-secondary">
             Continuar Comprando
-          </a>
+          </Link>
         </div>
       </>
     );
@@ -181,9 +182,9 @@ const CarrinhoPage = () => {
         </div>
         <div className="row align-items-center mt-4" style={{ maxWidth: 900, margin: '0 auto'}}>
           <div className="col-md-6 d-flex justify-content-start">
-            <a href="./" className="btn carrinho-btn-lg carrinho-btn-continuar" style={{padding: "12px 0", minHeight: 48, display: 'flex', alignItems: 'center', fontWeight: 600, fontSize: '1.15rem', borderRadius: 8, minWidth: 200, padding: "0px 15px"}}>
+            <Link to="/" className="btn carrinho-btn-lg carrinho-btn-continuar" style={{padding: "12px 0", minHeight: 48, display: 'flex', alignItems: 'center', fontWeight: 600, fontSize: '1.15rem', borderRadius: 8, minWidth: 200, padding: "0px 15px"}}>
               Continuar Comprando
-            </a>
+            </Link>
           </div>
           <div className="col-md-6 d-flex justify-content-end align-items-center gap-3">
             <button className="btn btn-primary carrinho-btn-lg" style={{padding: "12px 0", minHeight: 48, fontWeight: 600, fontSize: '1.15rem', borderRadius: 8, minWidth: 200, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>

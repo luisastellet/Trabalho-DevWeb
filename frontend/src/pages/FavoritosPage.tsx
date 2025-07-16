@@ -3,7 +3,7 @@ import useUsuarioStore from "../store/UsuarioStore";
 import useRecuperarProdutos from "../hooks/useRecuperarProdutos";
 import Produto from "../interfaces/Produto";
 import { useEffect, useState } from "react";
-import { Navigate, useLocation } from "react-router-dom";
+import { Navigate, useLocation, Link } from "react-router-dom";
 import "./CarrinhoPage.css";
 
 export interface ProdCarrinho {
@@ -64,9 +64,9 @@ const FavoritosPage = () => {
       <>
         <h4 className="mb-4">Nenhum favorito ainda!</h4>
         <div>
-          <a href="./" className="btn btn-secondary">
+          <Link to="/" className="btn btn-secondary">
             Ver Produtos
-          </a>
+          </Link>
         </div>
       </>
     );
@@ -180,7 +180,25 @@ const FavoritosPage = () => {
           </table>
         </div>
         <div className="row align-items-center mt-4" style={{ maxWidth: 900, margin: "0 auto" }}>
-          
+          <div className="col-md-6 d-flex justify-content-start">
+            <Link to="/" className="btn carrinho-btn-lg carrinho-btn-continuar" style={{padding: "12px 0", minHeight: 48, display: 'flex', alignItems: 'center', fontWeight: 600, fontSize: '1.15rem', borderRadius: 8, minWidth: 200, padding: "0px 15px"}}>
+              Continuar Comprando
+            </Link>
+          </div>
+          <div className="col-md-6 d-flex justify-content-end align-items-center gap-3">
+            <h4 style={{ color: '#7c5e3c', fontWeight: 700, margin: 0, minWidth: 180, textAlign: 'center', display: 'flex', alignItems: 'center', height: 48 }}>
+              Total: R$ {produtosFavoritos
+                .map((produto) =>
+                  produto.preco * (quantidades[produto.id!] || 0)
+                )
+                .reduce((total, subtotal) => total + subtotal, 0)
+                .toLocaleString("pt-BR", {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                  useGrouping: true,
+                })}
+            </h4>
+          </div>
         </div>
       </section>
     </div>
