@@ -187,7 +187,15 @@ const CarrinhoPage = () => {
             </Link>
           </div>
           <div className="col-md-6 d-flex justify-content-end align-items-center gap-3">
-            <button className="btn btn-primary carrinho-btn-lg" style={{padding: "12px 0", minHeight: 48, fontWeight: 600, fontSize: '1.15rem', borderRadius: 8, minWidth: 200, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            <button
+              className="btn btn-primary carrinho-btn-lg"
+              style={{padding: "12px 0", minHeight: 48, fontWeight: 600, fontSize: '1.15rem', borderRadius: 8, minWidth: 200, display: 'flex', alignItems: 'center', justifyContent: 'center'}}
+              onClick={() => {
+                window.alert('Compra realizada com sucesso!');
+                setCarrinho([]);
+                localStorage.removeItem('carrinho');
+              }}
+            >
               Finalizar Compra
             </button>
             <h4 style={{ color: '#7c5e3c', fontWeight: 700, margin: 0, minWidth: 180, textAlign: 'center', display: 'flex', alignItems: 'center', height: 48 }}>
